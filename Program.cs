@@ -24,4 +24,4 @@ int cijeli = (int)decimalNum;
 int cijelidva = trueFalse ? 1 : 0;
 // int result = int.Parse(Regex.Match(number,@"/d").Value, NumberFormatInfo.InvariantInfo);
 
-Console.WriteLine("Cijena proizvoda je :" + cijelidva);
+
