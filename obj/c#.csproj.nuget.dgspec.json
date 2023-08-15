@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj": {}
+    "C:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj",
         "projectName": "c#",
-        "projectPath": "c:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\c#\\c#.csproj",
         "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Korisnik\\Desktop\\c#\\obj\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\c#\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config"

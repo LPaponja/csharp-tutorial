@@ -1,27 +1,36 @@
-﻿string hello = "Dobar dan.";
-string poruka = "Ovo je poruka";
+﻿int[] stranice = new int[2] {266,353};
 
-Console.WriteLine(hello);
-Console.WriteLine(poruka);
-Console.OutputEncoding = System.Text.Encoding.UTF8;
-
-// tip nazivVarijable = vrijednost
-// int number = 120;
-double decimalNum = 3.14566;
-// string valuta = "$";
-Boolean trueFalse = false;
+Knjiga book = new Knjiga("Svijet", 1, "Mate Mikulić", stranice [0], true);
+Knjiga book2 = new Knjiga("Moral", 3, "Mateja Mikulić", stranice [1], false);
 
 
-int number = 12011;
-string valuta = "180";
+Console.WriteLine("-----------------------------------------------");
+Console.WriteLine("Ime ove knjige je: {0} ", book.naziv);
+Console.WriteLine("Verzija knjige: {0} ", book.verzija);
+Console.WriteLine("Autor: {0}", book.autor);
+Console.WriteLine("Broj stranica: {0}", book.stranice);
+Console.WriteLine("Spol autora: {0}", book.spol ? "Muško": "Žensko");
+Console.WriteLine("-----------------------------------------------");
+Console.WriteLine("Ime ove knjige je; {0} ", book2.naziv);
+Console.WriteLine("Verzija knjige: {0}", book2.verzija);
+Console.WriteLine("Autor: {0}", book2.autor);
+Console.WriteLine("Broj stranica: {0}", book2.stranice);
+Console.WriteLine("Spol autora: {0}", book2.spol ? "Muško": "Žensko");
+Console.WriteLine("-----------------------------------------------");
 
-//casting, parsiranje
-string result = ((number + int.Parse(valuta)) / 100).ToString();
-string booleanString = trueFalse.ToString();
-string doubleString = decimalNum.ToString();
+class Knjiga {
+    public string naziv ; 
+    public int verzija ;
+    public string autor ;
+    public int stranice ;
+    public bool spol ;
 
-int cijeli = (int)decimalNum;
-int cijelidva = trueFalse ? 1 : 0;
-// int result = int.Parse(Regex.Match(number,@"/d").Value, NumberFormatInfo.InvariantInfo);
 
-Console.WriteLine("Cijena proizvoda je :" + cijelidva);
+    public Knjiga (string naziv, int verzija, string autor, int stranice, bool spol) {
+        this.naziv = naziv;
+        this.verzija = verzija;
+        this.autor = autor;
+        this.stranice = stranice;
+        this.spol = spol;
+}
+}
