@@ -1,14 +1,20 @@
-﻿namespace Program {
-    
-    class Application {
-        static void Main(string[] args) {
-
+﻿namespace Program
+{
+    class Application
+    {
+        static void Main(string[] args)
+        {
             MainMenu menu = new MainMenu();
-            string kategorija = menu.ChampionOrigin();
-            string ime = menu.ChampionIme();
+            string klasa =menu.CharacterClass();
+            string ime = menu.CharacterName();
 
-            Champion player = new Champion(kategorija, ime);
+
+            Character player = new Character(klasa, ime);
             player.print();
+
+            BattleManager battle = new BattleManager();
+            battle.startBattle(player);
+
         }
     }
 }

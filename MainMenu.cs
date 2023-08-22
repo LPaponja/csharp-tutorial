@@ -1,58 +1,68 @@
-using System.Xml.Serialization;
-
-namespace Program{
-
-    class MainMenu {
-        private string champOrigin;
-        public string ChampionOrigin () {
-            
+namespace Program
+{
+    class MainMenu
+    {
+        private string charClass;
+        public string CharacterClass()
+        {
             bool running = false;
-            do {
-                Console.WriteLine("1.Ionia");
-                Console.WriteLine("2.Demacia");
-                Console.WriteLine(" \nUpišite broj region-a koju želite uzeti");  
+            do
+            {
+                //Izbornik
+                Console.WriteLine("1.Warrior ");
+                Console.WriteLine("2.Mage ");
+                Console.WriteLine("\nUpišite broj klase lika koju želite odabrati ");
 
+                //Korisnik bira klasu
                 string key = Console.ReadLine();
-                int odabir = key == "" ? 0 : int.Parse(key);
+                int choice = key == "" ? 0 : int.Parse(key);
 
-                if (odabir == 1) {
-                    Console.WriteLine("\nOdabrali ste region: Ionia");
-                    champOrigin = "Ionia";
-                    running = false;
-                }  
-                else if (odabir == 2) {
-                    Console.WriteLine("\nOdabrali ste region: Demacia");
-                    champOrigin = "Demacia";
+                //Ako izbor nije 1 ili 2, prekini rad aplikacije
+                if (choice == 1)
+                {
+                    Console.WriteLine("\nOdabrali ste klasu: Warrior");
+                    charClass = "Warrior";
                     running = false;
                 }
-                else {
-                    Console.WriteLine("\nNedozvoljeni unos! Probajte ponovno!");
+                else if (choice == 2)
+                {
+                    Console.WriteLine("\nOdabrali st klasu: Mage");
+                    charClass = "Mage";
+                    running = false;
+                }
+                else
+                {
+                    Console.WriteLine("\nNedozvoljeni unos! Probajte ponovno.");
                     Environment.Exit(0);
                 }
-
             } while (running);
 
-            return champOrigin;
+            return charClass;
         }
-        public string ChampionIme() {
-            
-            string ime;
+
+        public string CharacterName()
+        {
+            string name;
             bool running = true;
-            do {
-                Console.WriteLine("\n***********************************************");
-                Console.WriteLine("\nUpišite ime championa: ");
-                ime = Console.ReadLine();
+            do
+            {
+                //Ako je izbor u redu, pitaj igrača za ime lika
+                Console.WriteLine("\n******************************************");
+                Console.WriteLine("\nUpišite ime vašeg lika ");
+                name = Console.ReadLine();
 
-                if(ime == null || ime == "" ) {
-
-                    Console.WriteLine("\nError! Niste unijeli ime championa. Probajte ponovno!");
+                //Ako nema unosa, prekini rad aplikacije
+                if (name == null || name == "")
+                {
+                    Console.WriteLine("\nGreška! Niste unijeli ime lika. Probajte ponovno");
                 }
-                else {
-                    running = false;
+                else
+                {
+                running = false;
                 }
             } while (running);
 
-            return ime;
+            return name;
         }
     }
 }
